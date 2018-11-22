@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="CENTER" blendMode="DARKEN" gridLinesVisible="false" hgap="5.0" prefHeight="712.0" prefWidth="999.666748046875" vgap="5.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="wieloskalowe.Gui">
+  <children>
+    <Separator orientation="VERTICAL" prefHeight="1110.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="13" GridPane.rowSpan="2147483647" />
+    <HBox GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
+    <Label text="Width:" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+    <Label text="Height:" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+    <TextField fx:id="input_szer" text="300" GridPane.columnIndex="0" GridPane.rowIndex="14" />
+    <TextField fx:id="input_wys" prefHeight="25.0" prefWidth="46.0" text="300" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+    <Label text="Inclusions" GridPane.columnIndex="0" GridPane.rowIndex="20" />
+    <TextField fx:id="input_inkluzje" text="7" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+    <Label text="Inclusions Type:" GridPane.columnIndex="0" GridPane.rowIndex="18" />
+    <Label text="Inclusions size" GridPane.columnIndex="0" GridPane.rowIndex="21" />
+    <ChoiceBox fx:id="input_typinkluzji" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="19" />
+    <TextField fx:id="input_rozmiarinkluzji" text="8" GridPane.columnIndex="1" GridPane.rowIndex="21" />
+    <Label text="Moore Ext." GridPane.columnIndex="0" GridPane.rowIndex="22" />
+    <CheckBox fx:id="input_moore" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="22" />
+    <Label text="Grains:" GridPane.columnIndex="0" GridPane.rowIndex="17" />
+    <TextField fx:id="input_ziarna" text="30" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+    <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-1.0" prefHeight="300.0" prefWidth="300.0" GridPane.columnIndex="3" GridPane.columnSpan="4" GridPane.rowIndex="15" GridPane.rowSpan="24">
+      <children>
+        <Canvas fx:id="canvas" height="640.0" layoutX="0.0" layoutY="-76.0" opacity="1.0" scaleX="1.0" scaleY="1.0" width="640.0" />
+      </children>
+    </Pane>
+    <Button mnemonicParsing="false" onAction="#Inclusionbutton" text="Add incusions" GridPane.columnIndex="1" GridPane.rowIndex="25" />
+    <Button id="runButton" mnemonicParsing="false" onAction="#Startbutton" text="Run" GridPane.columnIndex="1" GridPane.rowIndex="27" />
+    <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Resetbutton" prefHeight="21.0" prefWidth="50.999908447265625" text="Reset" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="27" />
+    <TextField fx:id="input_4zasada" text="90" GridPane.columnIndex="1" GridPane.rowIndex="23" />
+    <Label text="Probabliity Rule 4:" GridPane.columnIndex="0" GridPane.rowIndex="23" />
+    <MenuBar blendMode="GREEN" cache="false" depthTest="INHERIT" opacity="1.0" pickOnBounds="true" prefWidth="116.0" GridPane.columnIndex="0" GridPane.columnSpan="7" GridPane.rowIndex="3">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <Menu mnemonicParsing="false" text="Export">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#TxtExport" text="TXT" fx:id="menuExportTxt" />
+                <MenuItem mnemonicParsing="false" onAction="#BmpExport" text="BMP" fx:id="menuExportBmp" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Import">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#TxtImport" text="TXT" fx:id="menuImportTxt" />
+                <MenuItem mnemonicParsing="false" onAction="#BmpImport" text="BMP" fx:id="menuImportBmp" />
+              </items>
+            </Menu>
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <Button mnemonicParsing="false" onAction="#onEntireClearClick" text="Remove colors" visible="false" GridPane.columnIndex="0" GridPane.rowIndex="30" />
+  </children>
+  <columnConstraints>
+    <ColumnConstraints maxWidth="138.0" prefWidth="138.0" />
+    <ColumnConstraints maxWidth="138.0" prefWidth="138.0" />
+    <ColumnConstraints maxWidth="86.0" prefWidth="7.0" />
+    <ColumnConstraints maxWidth="269.0" prefWidth="269.0" />
+    <ColumnConstraints maxWidth="138.0" prefWidth="138.0" />
+    <ColumnConstraints maxWidth="138.0" prefWidth="138.0" />
+    <ColumnConstraints maxWidth="138.0" prefWidth="138.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="24.0" prefHeight="24.0" />
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="0.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="25.0" prefHeight="16.0" />
+    <RowConstraints maxHeight="299.0" prefHeight="14.0" />
+    <RowConstraints maxHeight="299.0" prefHeight="15.0" />
+    <RowConstraints maxHeight="3.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="32.0" prefHeight="16.0" />
+    <RowConstraints maxHeight="229.0" prefHeight="16.0" />
+    <RowConstraints maxHeight="279.0" prefHeight="21.0" />
+    <RowConstraints maxHeight="279.0" prefHeight="16.0" />
+    <RowConstraints maxHeight="203.0" prefHeight="16.0" />
+    <RowConstraints maxHeight="231.0" prefHeight="16.0" />
+    <RowConstraints maxHeight="231.0" prefHeight="16.0" />
+    <RowConstraints maxHeight="237.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="231.0" prefHeight="21.0" />
+    <RowConstraints maxHeight="231.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="231.0" prefHeight="21.0" />
+    <RowConstraints maxHeight="231.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="231.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="231.0" prefHeight="21.0" />
+    <RowConstraints maxHeight="231.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="207.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="207.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="207.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="207.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="199.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="21.0" prefHeight="0.0" />
+    <RowConstraints maxHeight="515.0" prefHeight="233.0" />
+    <RowConstraints maxHeight="258.0" prefHeight="15.0" />
+    <RowConstraints maxHeight="195.0" prefHeight="15.0" />
+  </rowConstraints>
+</GridPane>
